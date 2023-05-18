@@ -12,6 +12,7 @@ public:
   Player(const Player& player);
 
   void move(const bool arr[4]);
+  void move2(char key);
 
   ~Player();
 };

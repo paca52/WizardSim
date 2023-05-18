@@ -36,4 +36,24 @@ void Player::move(const bool arr[4]) {
   }
 }
 
+void Player::move2(char key) {
+  const int move_dist = 32;
+  switch(key) {
+    case KEY_W:
+      this->y -= move_dist;
+      break;
+    case KEY_A:
+      this->x -= move_dist;
+      break;
+    case KEY_S:
+      this->y += move_dist;
+      break;
+    case KEY_D:
+      this->x += move_dist;
+      break;
+    default:
+      break;
+  }
+}
+
 Player::~Player() { }
