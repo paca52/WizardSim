@@ -24,6 +24,6 @@ clean:
 	-del $(BIN).exe $(patsubst obj/%, obj\\%, $(OBJ)) $(patsubst obj/%, obj\\%, $(DEPFILES))
 
 clean_obj:
-	-del $(patsubst obj/%, obj\\%, $(OBJ)) $(patsubst obj/%, obj\\%, $(DEPFILES))
+	-del $(patsubst obj/%, obj\%, $(OBJ)) $(patsubst obj/%, obj\\%, $(DEPFILES))
 
 -include $(DEPFILES)
