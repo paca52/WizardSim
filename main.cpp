@@ -3,17 +3,17 @@
 #include "entity.hpp"
 #include "player.hpp"
 
-const int windowH = 800,
-          windowW = 450;
+const int windowW = 800,
+          windowH = 464;
 
 int main(void) {
-  InitWindow(windowH, windowW, "very nice game :)");
+  InitWindow(windowW, windowH, "very nice game :)");
 
   Texture2D text = LoadTexture("textures/Mario.png");
   text.height *= 2;
   text.width  *= 2;
 
-  Player p(windowH/2, windowW/2, &text);
+  Player p(windowW/2, windowH/2, &text);
 
   while(!WindowShouldClose()) {
     BeginDrawing();
