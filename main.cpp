@@ -15,7 +15,7 @@ int main(void) {
   text.height *= 2;
   text.width  *= 2;
 
-  Player p(windowW/2, windowH/2, &text);
+  Player p(0, 0, &text);
 
   while(!WindowShouldClose()) {
     BeginDrawing();
