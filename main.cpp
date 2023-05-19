@@ -18,21 +18,28 @@ int main(void) {
   Player p(0, 0, &text);
 
   while(!WindowShouldClose()) {
+
+    // UPDATE
+    const bool moveArr[4] = {
+      IsKeyDown(KEY_W),
+      IsKeyDown(KEY_A),
+      IsKeyDown(KEY_S),
+      IsKeyDown(KEY_D)
+    };
+
+    // DRAW
     BeginDrawing();
       ClearBackground(BLACK);
       DrawTexture(background, 0, 0, RAYWHITE);
 
-      const bool moveArr[4] = {
-        IsKeyDown(KEY_W),
-        IsKeyDown(KEY_A),
-        IsKeyDown(KEY_S),
-        IsKeyDown(KEY_D)
-      };
       p.move2(GetKeyPressed());
 
       p.draw();
     EndDrawing();
   }
+
+  UnloadTexture(text);
+  UnloadTexture(background);
 
   CloseWindow();
 
