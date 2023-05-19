@@ -8,16 +8,23 @@ const int windowW = 800,
 
 int main(void) {
   InitWindow(windowW, windowH, "WizardSim");
+  InitAudioDevice();
   SetTargetFPS(60);
 
   Texture2D background = LoadTexture("textures/back.png");
 
   Player p(0, 0, 3);
-  float timer = 0.0f;
+  float timer    = 0.0f;
   int frameCount = 0;
 
-  while(!WindowShouldClose()) {
+  Music music    = LoadMusicStream("sound/music1.wav");
+  music.looping  = true;
 
+  PlayMusicStream(music);
+
+  while(!WindowShouldClose()) {
+    UpdateMusicStream(music);
+    
     // UPDATE
     timer += GetFrameTime();
 
@@ -43,8 +50,9 @@ int main(void) {
   }
 
   UnloadTexture(background);
-
+  UnloadMusicStream(music);
   CloseWindow();
+  CloseAudioDevice();
 
   return 0;
 }
