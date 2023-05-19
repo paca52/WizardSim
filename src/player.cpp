@@ -3,60 +3,55 @@
 Player::Player() 
   :Entity() { }
 
-Player::Player(double x, double y, Texture2D *texture) 
-  :Entity(x, y, texture) { }
+Player::Player(double x, double y) 
+  :Player(x, y, 1) { }
 
-Player::Player(double x, double y, Texture2D *texture, int numberOfFrames) 
-  :Entity(x, y, texture, numberOfFrames) { }
+Player::Player(double x, double y, int numberOfFrames) 
+  :Entity(x, y, numberOfFrames) {
+    texture = new Texture2D[4] {
+      LoadTexture("textures/Carobnjak2.png"),
+      LoadTexture("textures/Carobnjak1.png"),
+      LoadTexture("textures/Carobnjak2.png"),
+      LoadTexture("textures/Carobnjak3.png")
+    };
+
+    for(int i=0; i<4; ++i) {
+      texture[i].width  *= 2;
+      texture[i].height *= 2;
+    }
+
+    frameWidth  = texture[0].width / numberOfFrames;
+    frameHeight = texture[0].height;
+}
 
 Player::Player(const Player& player) 
   :Entity(player) { }
 
 /*
-  arr - sadrzi 4 elementa koji predstavljaju {w, a, s, d} tim redom
-  arr[i] = 1 ako je dugme pritisnuto
-  arr[i] = 0 ako dugme nije pritisnuto
+  key - key pressed, can be any key but will only move for w, a, s and d
 */
-void Player::move(const bool arr[4]) {
-  for(int i=0; i<4; ++i) {
-    if(!arr[i]) continue;
-
-    switch(i) {
-      case 0:
-        this->y -= MOVE_DIST;
-        break;
-      case 1:
-        this->x -= MOVE_DIST;
-        break;
-      case 2:
-        this->y += MOVE_DIST;
-        break;
-      case 3:
-        this->x += MOVE_DIST;
-        break;
-    }
-  }
-}
-
-void Player::move2(char key) {
-  if(key == KEY_W || key == KEY_A || key == KEY_S || key == KEY_D)
-    timeStandingStill = 0.0f;
-  else
-    timeStandingStill += 0.01f;
-
+void Player::move(char key) {
   const int move_dist = 32;
+
+  if(key == KEY_W || key == KEY_A || key == KEY_S || key == KEY_D) timeStandingStill = 0.0f;
+  else timeStandingStill += 0.01f;
+
   switch(key) {
     case KEY_W:
-      y = y-move_dist < 0 ? y : y - move_dist;
+      y = y - move_dist < 0 ? y : y - move_dist;
+      lastDirection = GORE;
       break;
     case KEY_A:
-      x = x-move_dist < 0 ? x: x-move_dist;
+      x = x - move_dist < 0 ? x: x - move_dist;
+      lastDirection = LEVO;
       break;
     case KEY_S:
-      y = y+move_dist+( frameHeight ) > GetScreenHeight() ? y: y+move_dist;
+      y = y + move_dist + frameHeight > GetScreenHeight() ? y : y + move_dist;
+      lastDirection = DOLE;
       break;
     case KEY_D:
-      x = x+move_dist+( frameWidth ) > GetScreenWidth() ? x: x+move_dist;
+      x = x + move_dist + frameWidth > GetScreenWidth() ? x : x + move_dist;
+      lastDirection = DESNO;
       break;
     default:
       break;
@@ -64,39 +59,25 @@ void Player::move2(char key) {
 }
 
 void Player::draw(int frameCount) {
-
-  if(timeStandingStill < 4.0f) {
-    DrawTextureRec(
-      *this->texture,
-      Rectangle{
-        0,
-        0,
-        this->frameWidth,
-        this->frameHeight
-      },
-      Vector2{
-        (float)this->x,
-        (float)this->y
-      },
-      RAYWHITE
-    );
-    return;
-  }
-
   DrawTextureRec(
-    *this->texture,
+    texture[lastDirection],
     Rectangle{
-      (frameWidth * ( frameCount % numberOfFrames )),
+      timeStandingStill < 1.0f ? 0 : (frameWidth * ( frameCount % numberOfFrames )),
       0,
       frameWidth,
       frameHeight
     },
     Vector2{
-      (float)this->x,
-      (float)this->y
+      (float)x,
+      (float)y
     },
     RAYWHITE
   );
 }
 
-Player::~Player() { }
+Player::~Player() {
+  for(int i=0; i<4; ++i) {
+    UnloadTexture(texture[i]);
+  }
+  delete [] texture;
+}

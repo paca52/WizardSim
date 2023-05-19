@@ -3,19 +3,18 @@
 
 #include "entity.hpp"
 
-const double MOVE_DIST = 0.1;
+enum DIRECTION { GORE, LEVO, DOLE, DESNO };
 
 class Player : public Entity {
-  float timeStandingStill    = 0.0f;
-  const int numberOfFrames   = 3;
+  float timeStandingStill = 0.0f;
+  DIRECTION lastDirection = DOLE;
 public:
   Player();
-  Player(double x, double y, Texture2D *texture);
-  Player(double x, double y, Texture2D *texture, int numberOfFrames);
+  Player(double x, double y);
+  Player(double x, double y, int numberOfFrames);
   Player(const Player& player);
 
-  void move(const bool arr[4]);
-  void move2(char key);
+  void move(char key);
   void draw(int frameCount);
 
   ~Player();

@@ -8,18 +8,13 @@ const int windowW = 800,
 
 int main(void) {
   InitWindow(windowW, windowH, "WizardSim");
+  SetTargetFPS(60);
 
-  Texture2D text = LoadTexture("textures/IdleProba.png");
   Texture2D background = LoadTexture("textures/back.png");
 
-  text.height *= 2;
-  text.width  *= 2;
-
-  Player p(0, 0, &text, 3);
+  Player p(0, 0, 3);
   float timer = 0.0f;
   int frameCount = 0;
-
-
 
   while(!WindowShouldClose()) {
 
@@ -35,25 +30,18 @@ int main(void) {
     // wrap frames around
     frameCount %= 30;
 
-    // const bool moveArr[4] = {
-    //   IsKeyDown(KEY_W),
-    //   IsKeyDown(KEY_A),
-    //   IsKeyDown(KEY_S),
-    //   IsKeyDown(KEY_D)
-    // };
-
-    p.move2(GetKeyPressed());
+    p.move(GetKeyPressed());
 
     // DRAW
     BeginDrawing();
       ClearBackground(BLACK);
       DrawTexture(background, 0, 0, RAYWHITE);
+      DrawFPS(0, 0);
 
       p.draw(frameCount);
     EndDrawing();
   }
 
-  UnloadTexture(text);
   UnloadTexture(background);
 
   CloseWindow();
