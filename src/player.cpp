@@ -9,7 +9,7 @@ Player::Player(double x, double y)
 Player::Player(double x, double y, int numberOfFrames) 
   :Entity(x, y, numberOfFrames) {
     texture = new Texture2D[4] {
-      LoadTexture("textures/Carobnjak2.png"),
+      LoadTexture("textures/Carobnjak0.png"),
       LoadTexture("textures/Carobnjak1.png"),
       LoadTexture("textures/Carobnjak2.png"),
       LoadTexture("textures/Carobnjak3.png")
@@ -38,19 +38,27 @@ void Player::move(char key) {
 
   switch(key) {
     case KEY_W:
-      y = y - move_dist < 0 ? y : y - move_dist;
+      if(lastDirection == GORE && y - move_dist >= 0) {
+        y = y - move_dist;
+      }
       lastDirection = GORE;
       break;
     case KEY_A:
-      x = x - move_dist < 0 ? x: x - move_dist;
+      if(lastDirection == LEVO && x - move_dist >= 0) {
+        x = x - move_dist;
+      }
       lastDirection = LEVO;
       break;
     case KEY_S:
-      y = y + move_dist + frameHeight > GetScreenHeight() ? y : y + move_dist;
+      if(lastDirection == DOLE && y + move_dist + frameHeight < GetScreenHeight()) {
+        y = y + move_dist;
+      }
       lastDirection = DOLE;
       break;
     case KEY_D:
-      x = x + move_dist + frameWidth > GetScreenWidth() ? x : x + move_dist;
+      if(lastDirection == DESNO && x + move_dist + frameWidth < GetScreenWidth()) {
+        x = x + move_dist;
+      }
       lastDirection = DESNO;
       break;
     default:
