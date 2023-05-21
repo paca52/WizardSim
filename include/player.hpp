@@ -2,6 +2,8 @@
 #define PLAYER_HPP
 
 #include "entity.hpp"
+#include "level.hpp"
+#include <cmath>
 
 enum DIRECTION { GORE, LEVO, DOLE, DESNO };
 
@@ -15,7 +17,10 @@ public:
   Player(const Player& player);
 
   void move(char key);
-  void draw(int frameCount);
+  void move2(char key);
+  void move2(char key, const Level& level);
+  void draw(int frameCount) const;
+  void drawHitbox(void) const;
 
   ~Player();
 };

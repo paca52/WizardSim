@@ -147,7 +147,44 @@ obj/player.o: src/player.cpp include/player.hpp include/entity.hpp \
  C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/basic_ios.tcc \
  C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/ostream.tcc \
  C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/istream \
- C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/istream.tcc
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/istream.tcc \
+ include/level.hpp \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/fstream \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/codecvt.h \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/fstream.tcc \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/vector \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_uninitialized.h \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_vector.h \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_bvector.h \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/vector.tcc \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/unordered_set \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ext/aligned_buffer.h \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/hashtable.h \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/hashtable_policy.h \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tuple \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/uses_allocator.h \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/enable_special_members.h \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/node_handle.h \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/unordered_set.h \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/erase_if.h \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cmath \
+ C:/Users/pavla/scoop/apps/mingw/current/x86_64-w64-mingw32/include/math.h \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/specfun.h \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/limits \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/gamma.tcc \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/special_function_util.h \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/bessel_function.tcc \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/beta_function.tcc \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/ell_integral.tcc \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/exp_integral.tcc \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/hypergeometric.tcc \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/legendre_function.tcc \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/modified_bessel_func.tcc \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/poly_hermite.tcc \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/poly_laguerre.tcc \
+ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/riemann_zeta.tcc
 include/player.hpp:
 include/entity.hpp:
 include/raylib.h:
@@ -299,3 +336,40 @@ C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/includ
 C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/ostream.tcc:
 C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/istream:
 C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/istream.tcc:
+include/level.hpp:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/fstream:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/codecvt.h:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/fstream.tcc:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/vector:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_uninitialized.h:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_vector.h:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_bvector.h:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/vector.tcc:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/unordered_set:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ext/aligned_buffer.h:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/hashtable.h:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/hashtable_policy.h:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tuple:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/uses_allocator.h:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/enable_special_members.h:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/node_handle.h:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/unordered_set.h:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/erase_if.h:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cmath:
+C:/Users/pavla/scoop/apps/mingw/current/x86_64-w64-mingw32/include/math.h:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/specfun.h:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/limits:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/gamma.tcc:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/special_function_util.h:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/bessel_function.tcc:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/beta_function.tcc:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/ell_integral.tcc:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/exp_integral.tcc:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/hypergeometric.tcc:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/legendre_function.tcc:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/modified_bessel_func.tcc:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/poly_hermite.tcc:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/poly_laguerre.tcc:
+C:/Users/pavla/scoop/apps/mingw/current/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/tr1/riemann_zeta.tcc:
