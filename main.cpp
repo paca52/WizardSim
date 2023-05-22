@@ -2,6 +2,7 @@
 #include "raylib.h"
 #include "level.hpp"
 #include "entity.hpp"
+#include "hitbox.hpp"
 #include "player.hpp"
 
 const int windowW = 800,
@@ -24,7 +25,6 @@ int main(void) {
   PlayMusicStream(music);
 
   Level level(windowH, windowW, 32, 32);
-  level.printData();
 
   while(!WindowShouldClose()) {
     UpdateMusicStream(music);
@@ -41,7 +41,7 @@ int main(void) {
     // wrap frames around
     frameCount %= 30;
 
-    p.move2(GetKeyPressed(), level);
+    p.move2(level);
 
     // DRAW
     BeginDrawing();
@@ -49,9 +49,7 @@ int main(void) {
       DrawTexture(background, 0, 0, RAYWHITE);
       DrawFPS(0, 0);
 
-      level.drawData();
       p.draw(frameCount);
-      p.drawHitbox();
     EndDrawing();
   }
 

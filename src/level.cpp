@@ -18,6 +18,39 @@ Level::Level(int height, int width, int tileWidth, int tileHeight)
   while(file >> str) { walkableTiles.insert(str[0]); }  
 }
 
+std::pair<int, int> Level::tileIndex(float x, float y) const {
+  return {
+    x / tileWidth,
+    y / tileHeight
+  };
+}
+
+bool Level::isWalkable(const Ragdoll& ragdoll) const {
+  auto valid = [&](std::pair<float, float> p) {
+    auto [j, i] = p;
+    return
+      (int)j <= ( width / tileWidth ) &&
+      (int)i <= ( height / tileHeight ) &&
+      (int)i >= 0 &&
+      (int)j >= 0 &&
+      walkableTiles.find(data[i][j]) != walkableTiles.end();
+  };
+
+  auto v = ragdoll.getHitboxes();
+  for(const auto& box : v) {
+    auto [x1, y1, x2, y2] = box->getPoints();
+
+    if(
+      !valid(tileIndex(x1, y1)) ||
+      !valid(tileIndex(x1, y2)) ||
+      !valid(tileIndex(x2, y1)) ||
+      !valid(tileIndex(x2, y2))
+    ) return false;
+  }
+    
+  return true;
+}
+
 void Level::printData(void) const {
   for(int i=0; i<height/tileWidth; ++i) {
     for(int j=0; j<width/tileHeight; ++j) {
@@ -31,25 +64,6 @@ void Level::printData(void) const {
     std::cout << it << " ";
   }
   std::cout << "\n";
-}
-
-std::pair<int, int> Level::tileIndex(float x, float y) const {
-  return {
-    x / tileWidth,
-    y / tileHeight
-  };
-}
-
-bool Level::isWalkable(float x, float y) const {
-  auto [j, i] = tileIndex(x, y);
-  // std::cout << "(i, j) = (" << i << ", " << j << "); data[i][j] = " << data[i][j] << "\n";
-  std::cout << "currently on: (" << i << ", " << j << ") = " << data[i][j] << "\n";
-  return
-    (int)j <= ( width / tileWidth ) &&
-    (int)i <= ( height / tileHeight ) &&
-    (int)i >= 0 &&
-    (int)j >= 0 &&
-    walkableTiles.find(data[i][j]) != walkableTiles.end();
 }
 
 void Level::drawData(void) const {

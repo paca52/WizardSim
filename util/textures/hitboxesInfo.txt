@@ -1,0 +1,34 @@
+body {
+	start_x: 12
+	start_y: 15
+	width: 9
+	height: 15
+}
+
+head {
+	start_x: 12
+	start_y: 11
+	width: 9
+	height: 4
+}
+
+feet {
+	start_x: 12
+	start_y: 30
+	width: 9
+	height: 3
+}
+
+leftArm {
+	start_x: 9 
+	start_y: 20
+	width: 4
+	height: 9
+} 
+
+rightArm {
+	start_x: 23
+	start_y: 20
+	width: 4
+	height: 9 
+}
